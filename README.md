@@ -1,16 +1,12 @@
-# app_life_cycle
+# Flutter_Application_Lifecycle
+App Lifecycle of flutter app
 
-A new Flutter application.
+The state in which the application can be described is the enum class AppLifecycleState.
+The observable lifecycle events are:
+inactive — The application is in an inactive state and is not receiving user input. This event only works on iOS, as there is no equivalent event to map to on Android
+paused — The application is not currently visible to the user, not responding to user input, and running in the background. This is equivalent to onPause() in Android
+resumed — The application is visible and responding to user input. This is equivalent to onPostResume() in Android
+suspending — The application is suspended momentarily. This is equivalent to onStop in Android; it is not triggered on iOS as there is no equivalent event to map to on iOS
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+Reference : https://api.flutter.dev/flutter/dart-ui/AppLifecycleState-class.html
